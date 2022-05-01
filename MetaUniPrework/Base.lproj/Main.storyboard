@@ -1,0 +1,161 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="19162" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19144"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--First View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="FirstViewController" customModule="MetaUniPrework" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="What is your name?" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5e1-IW-cn3">
+                                <rect key="frame" x="121" y="144" width="172.5" height="24"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="100" id="jtE-r2-vhr"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="JMG-7E-xMn">
+                                <rect key="frame" x="107" y="198" width="200" height="34"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="200" id="3mE-aX-NMh"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0xL-ob-MRC">
+                                <rect key="frame" x="125" y="262" width="164" height="40"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="40" id="0b3-ye-9yy"/>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="60" id="fEB-pD-jVg"/>
+                                </constraints>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="tinted" title="Pick an Emotion">
+                                    <fontDescription key="titleFontDescription" type="system" pointSize="20"/>
+                                </buttonConfiguration>
+                                <connections>
+                                    <segue destination="I06-xY-PTo" kind="show" id="Yby-wT-Pcu"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="How are you feeling?" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4IA-bM-MGn">
+                                <rect key="frame" x="107" y="332" width="200" height="24"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="200" id="Ldt-fF-Guw"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="4IA-bM-MGn" firstAttribute="top" secondItem="0xL-ob-MRC" secondAttribute="bottom" constant="30" id="E1P-qL-oC1"/>
+                            <constraint firstItem="4IA-bM-MGn" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="YhE-y6-lWP"/>
+                            <constraint firstItem="0xL-ob-MRC" firstAttribute="top" secondItem="JMG-7E-xMn" secondAttribute="bottom" constant="30" id="a4T-0d-znk"/>
+                            <constraint firstItem="0xL-ob-MRC" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="aSc-dD-IlN"/>
+                            <constraint firstItem="5e1-IW-cn3" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="byi-Om-80v"/>
+                            <constraint firstItem="JMG-7E-xMn" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="mcs-nY-Lk3"/>
+                            <constraint firstItem="JMG-7E-xMn" firstAttribute="top" secondItem="5e1-IW-cn3" secondAttribute="bottom" constant="30" id="naR-5T-4Fg"/>
+                            <constraint firstItem="5e1-IW-cn3" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="100" id="uJu-e8-I4L"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="emotionLabel" destination="4IA-bM-MGn" id="g7A-iI-gUo"/>
+                        <outlet property="nameTextField" destination="JMG-7E-xMn" id="CQp-Xt-xdy"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="139" y="125"/>
+        </scene>
+        <!--Second View Controller-->
+        <scene sceneID="sQH-in-6ZO">
+            <objects>
+                <viewController id="I06-xY-PTo" customClass="SecondViewController" customModule="MetaUniPrework" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="lGc-EI-Zo7">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Hello, user" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5V2-WC-Be3">
+                                <rect key="frame" x="157" y="100" width="100" height="24"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="100" id="rAi-I5-fuo"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3F7-9l-5Dr">
+                                <rect key="frame" x="174" y="154" width="66" height="31"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="66" id="20f-Sk-TAH"/>
+                                </constraints>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="filled" title="Happy"/>
+                                <connections>
+                                    <action selector="didPickEmotion:" destination="I06-xY-PTo" eventType="touchUpInside" id="o9r-VI-HkA"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ts5-kf-PWT">
+                                <rect key="frame" x="182.5" y="215" width="49" height="31"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="49" id="xTC-Iu-Z8m"/>
+                                </constraints>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="filled" title="Sad"/>
+                                <connections>
+                                    <action selector="didPickEmotion:" destination="I06-xY-PTo" eventType="touchUpInside" id="92n-zg-xFN"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eVH-G1-38e">
+                                <rect key="frame" x="175.5" y="276" width="63" height="31"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="63" id="O8y-Z2-HUn"/>
+                                </constraints>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="filled" title="Angry"/>
+                                <connections>
+                                    <action selector="didPickEmotion:" destination="I06-xY-PTo" eventType="touchUpInside" id="VhE-Ep-LUd"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="Pck-wy-RQc"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="5V2-WC-Be3" firstAttribute="centerX" secondItem="lGc-EI-Zo7" secondAttribute="centerX" id="1bl-fN-KYn"/>
+                            <constraint firstItem="eVH-G1-38e" firstAttribute="centerX" secondItem="lGc-EI-Zo7" secondAttribute="centerX" id="ARQ-ed-0IH"/>
+                            <constraint firstItem="3F7-9l-5Dr" firstAttribute="centerX" secondItem="lGc-EI-Zo7" secondAttribute="centerX" id="Cs8-Oh-WHO"/>
+                            <constraint firstItem="ts5-kf-PWT" firstAttribute="centerX" secondItem="lGc-EI-Zo7" secondAttribute="centerX" id="FGt-f3-FEs"/>
+                            <constraint firstItem="eVH-G1-38e" firstAttribute="top" secondItem="ts5-kf-PWT" secondAttribute="bottom" constant="30" id="G9U-0P-Em1"/>
+                            <constraint firstItem="ts5-kf-PWT" firstAttribute="top" secondItem="3F7-9l-5Dr" secondAttribute="bottom" constant="30" id="XJY-wb-p1d"/>
+                            <constraint firstItem="3F7-9l-5Dr" firstAttribute="top" secondItem="5V2-WC-Be3" secondAttribute="bottom" constant="30" id="YNG-bp-EIo"/>
+                            <constraint firstItem="5V2-WC-Be3" firstAttribute="top" secondItem="Pck-wy-RQc" secondAttribute="top" constant="100" id="mO5-h0-L8b"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="Kb0-Hx-i6Z"/>
+                    <connections>
+                        <outlet property="greetUserLabel" destination="5V2-WC-Be3" id="vU8-Tf-d5a"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="vqN-BY-ISi" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="813" y="125"/>
+        </scene>
+    </scenes>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>
